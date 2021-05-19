@@ -1,8 +1,24 @@
-# Wellington Della Mura
-Bandeirantes-Paraná-Brazil
+# wellingtondellamura.github.io
 
+## Project setup
+```
+npm install
+```
 
-* Teaching Page: [https://cct.uenp.edu.br/wellingtondellamura]
-* GitHub Profile: [https://github.com/wellingtondellamura]
-* LinkedIn Profile: [https://www.linkedin.com/in/wellingtondellamura/]
-* Lattes Curricullum: [http://lattes.cnpq.br/0689979338493277]
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
