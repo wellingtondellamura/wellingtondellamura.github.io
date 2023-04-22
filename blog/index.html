@@ -10,7 +10,7 @@
     
     
     <script>
-        const folders = await getFoldersRecursive('data/blog');
+        const folders = getFoldersRecursive('data/blog');
         const list = document.getElementById('folders-list');
 
         for (const folder of folders) {
