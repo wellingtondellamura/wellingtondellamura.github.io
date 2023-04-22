@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Categorias</title>
-    
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="js/blog-data.js"></script>
-  </head>
-  <body>
-    <h1>Prof. Wellington Della Mura</h1>
-    <h2>Meu blog eventual</h2>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Categorias</title>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/blog-data.js"></script>
+</head>
+
+<body>
+  <h1>Prof. Wellington Della Mura</h1>
+  <h2>Meu blog eventual</h2>
 
 
-    <h3>Categorias</h3>
-    <ul id="folders-list"></ul>
-    
-    
-    <script>
-        const folders = getFoldersRecursive('data/blog');
-        const list = document.getElementById('folders-list');
-
-        for (const folder of folders) {
-            const li = document.createElement('li');
-            li.textContent = folder;
-            list.appendChild(li);
-        }
+  <h3>Categorias</h3>
+  <ul id="folders-list"></ul>
 
 
-    </script>
-  </body>
-  
+  <script>
+    let getFolders =  async () => {
+      let base = 'data/blog/';
+      const folders =  await getFoldersRecursive(base);
+      const list = document.getElementById('folders-list');
+      for (const folder of folders) {
+        const li = document.createElement('li');
+        li.textContent = folder.replace(base, '');
+        list.appendChild(li);
+      }
+    }
+
+    getFolders();
+
+
+
+
+  </script>
+</body>
+
 </html>

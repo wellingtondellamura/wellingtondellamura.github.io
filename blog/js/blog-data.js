@@ -1,5 +1,3 @@
-const axios = require('axios');
-
 const owner = 'wellingtondellamura';
 const repo = 'wellingtondellamura.github.io';
 
