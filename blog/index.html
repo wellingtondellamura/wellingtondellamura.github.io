@@ -1,1 +1,27 @@
-Meu blog ...
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Categorias</title>
+  </head>
+  <body>
+    <h1>Categorias</h1>
+    <ul id="folders-list"></ul>
+    
+    
+    <script>
+        const folders = await getFoldersRecursive('data/blog');
+        const list = document.getElementById('folders-list');
+
+        for (const folder of folders) {
+            const li = document.createElement('li');
+            li.textContent = folder;
+            list.appendChild(li);
+        }
+
+
+    </script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </body>
+  
+</html>
